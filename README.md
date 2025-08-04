@@ -31,4 +31,20 @@ This is a **User Management Microservice** developed using Spring Boot as part o
 ---
 
 ## 📁 Project Structure
+user-service/
+├── src/
+│ ├── main/
+│ │ ├── java/com/micro/user_service/
+│ │ │ ├── config/ # Security, JWT, and CORS config
+│ │ │ ├── controller/ # REST APIs
+│ │ │ ├── model/ # Entity classes
+│ │ │ ├── repository/ # JPA repositories
+│ │ │ ├── security/ # JWT filters and helpers
+│ │ │ └── service/ # Business logic
+│ │ └── resources/
+│ │ ├── application.yml # App config
+│ │ ├── static/ # Static files
+│ │ └── templates/ # Thymeleaf (if used)
+└───target/ # Compiled classes (auto-generated)
+
 

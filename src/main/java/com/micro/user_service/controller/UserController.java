@@ -17,8 +17,9 @@ public class UserController {
 
     @GetMapping("/{email}")
     public ResponseEntity<AdmUser> getUserByEmail(@PathVariable String email) {
-        AdmUser user = admUserRepository.findByEmail(email);
-        return user != null ? ResponseEntity.ok(user) : ResponseEntity.notFound().build();
+        return admUserRepository.findByEmail(email)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @GetMapping
